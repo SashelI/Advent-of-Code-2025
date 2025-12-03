@@ -1,5 +1,6 @@
 ﻿using Day_1;
 using Day_2;
+using Day_3;
 
 namespace Advent_of_Code_2025;
 
@@ -29,7 +30,7 @@ public class AOC25
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");*/
 
-		Console.WriteLine("/////////// 02 /////////// \r\n");
+		/*Console.WriteLine("/////////// 02 /////////// \r\n");
 
 		var detector = new PatternDetector();
 		var code = detector.CalculateCode();
@@ -39,7 +40,19 @@ public class AOC25
 		Console.WriteLine("/////////// 02 /////////// \r\n");
 
 		var codePartTwo = detector.CalculateCodePartTwo();
-		Console.WriteLine($"CODE PART TWO IS {codePartTwo}");
+		Console.WriteLine($"CODE PART TWO IS {codePartTwo}");*/
+
+		Console.WriteLine("/////////// 03 /////////// \r\n");
+
+		var charger = new JoltageCharger();
+		var totalJoltage = charger.TotalJoltage();
+
+		Console.WriteLine($"TOTAL JOLTAGE IS {totalJoltage}");
+
+		Console.WriteLine("/////////// 03 - 2 /////////// \r\n");
+
+		var totalJoltagePartTwo = charger.TotalJoltagePartTwo();
+		Console.WriteLine($"TOTAL JOLTAGE PART TWO IS {totalJoltagePartTwo}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");

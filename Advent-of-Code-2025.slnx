@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="Day 1/Day 1.csproj" />
   <Project Path="Day 2/Day 2.csproj" Id="38fe3a8f-1d3c-4ea3-b3bf-e96eb78b830d" />
+  <Project Path="Day 3/Day 3.csproj" Id="6f784ad9-ba64-4511-b8da-0e5b15b6577f" />
   <Project Path="Main/Advent-of-Code-2025.csproj" />
 </Solution>
