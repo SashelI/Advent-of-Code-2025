@@ -7,7 +7,7 @@
 
 		public JoltageCharger()
 		{
-			foreach (var bank in File.ReadAllLines("input_exemple.txt"))
+			foreach (var bank in File.ReadAllLines("input.txt"))
 			{
 				var joltages = new List<char>();
 				var intJoltages = new List<int>();
@@ -56,43 +56,40 @@
 			var unit = _allBanks[bankIndex][unitIndex];
 			string joltage = $"{dozen}{unit}";
 
-			Console.WriteLine($"MAX VOLTAGE FOR {CharListToString(_allBanks[bankIndex])} is {joltage}");
+			//Console.WriteLine($"MAX VOLTAGE FOR {CharListToString(_allBanks[bankIndex])} is {joltage}");
 
 			return Convert.ToInt32(joltage);
 		}
 
+		
+		private void MaxJoltageForBank(List<int> bank, ref List<(int, int)> lastPicks, ref string totalJoltage, int iteration)
+		{
+			if (iteration >= 12) return;
+
+			var picks = lastPicks;
+			var pick = bank.Index()
+				.SkipLast(12 - iteration - 1)
+				.Where(x => picks.Count == 0 || x.Index > picks[^1].Item1)
+				.MaxBy(x => x.Item);
+
+			lastPicks.Add(pick);
+
+			string joltage = $"{pick.Item}";
+
+			totalJoltage+=joltage;
+
+			MaxJoltageForBank(bank,ref lastPicks, ref totalJoltage, iteration+1);
+		}
+
 		private long MaxJoltageForBankPartTwo(int bankIndex)
 		{
-			List<int> lastActivatedBatteriesIndexes = new();
-			var consideredBatteries = _allBanksAsInt[bankIndex];
+			string totalJoltage = string.Empty;
+			var picksList = new List<(int Index, int Item)>();
 
-			string joltage = string.Empty;
+			MaxJoltageForBank(new List<int>(_allBanksAsInt[bankIndex]), ref picksList, ref totalJoltage, 0);
 
-			for (int i = 0; i < 6; i++)
-			{
-				if (lastActivatedBatteriesIndexes.Count == 2)
-				{
-					consideredBatteries.RemoveAt(lastActivatedBatteriesIndexes[0]);
-					consideredBatteries.RemoveAt(lastActivatedBatteriesIndexes[1]-1);
-				}
-
-				lastActivatedBatteriesIndexes.Clear();
-
-				var maxIndex = consideredBatteries.IndexOf(consideredBatteries[..^1].Max());
-				var unitIndex = consideredBatteries.IndexOf(consideredBatteries[(maxIndex + 1)..].Max());
-
-				lastActivatedBatteriesIndexes.Add(maxIndex);
-				lastActivatedBatteriesIndexes.Add(unitIndex);
-
-				var dozen = consideredBatteries[maxIndex];
-				var unit = consideredBatteries[unitIndex];
-				joltage += $"{dozen}{unit}";
-
-				Console.WriteLine($"MAX VOLTAGE FOR 0 {IntListToString(consideredBatteries)} is {joltage}");
-			}
-
-			Console.WriteLine($"MAX VOLTAGE FOR {CharListToString(_allBanks[bankIndex])} is {joltage}");
-			return (long)Convert.ToDouble(joltage);
+			//Console.WriteLine($"MAX VOLTAGE FOR {CharListToString(_allBanks[bankIndex])} is {totalJoltage}");
+			return (long)Convert.ToDouble(totalJoltage);
 		}
 
 		private string CharListToString(List<char> list)
