@@ -1,6 +1,7 @@
 ﻿using Day_1;
 using Day_2;
 using Day_3;
+using Day_4;
 
 namespace Advent_of_Code_2025;
 
@@ -42,7 +43,7 @@ public class AOC25
 		var codePartTwo = detector.CalculateCodePartTwo();
 		Console.WriteLine($"CODE PART TWO IS {codePartTwo}");*/
 
-		Console.WriteLine("/////////// 03 /////////// \r\n");
+		/*Console.WriteLine("/////////// 03 /////////// \r\n");
 
 		var charger = new JoltageCharger();
 		var totalJoltage = charger.TotalJoltage();
@@ -52,7 +53,22 @@ public class AOC25
 		Console.WriteLine("/////////// 03 - 2 /////////// \r\n");
 
 		var totalJoltagePartTwo = charger.TotalJoltagePartTwo();
-		Console.WriteLine($"TOTAL JOLTAGE PART TWO IS {totalJoltagePartTwo}");
+		Console.WriteLine($"TOTAL JOLTAGE PART TWO IS {totalJoltagePartTwo}");*/
+
+		Console.WriteLine("/////////// 04 /////////// \r\n");
+
+		var forklift = new Forklift();
+		//forklift.PrintMatrix();
+		Console.WriteLine("-----------------------------------------");
+		var count = forklift.CountPaperRolls(4);
+
+		Console.WriteLine($"TOTAL PAPER ROLLS IS {count}");
+
+		Console.WriteLine("/////////// 04 - 2 /////////// \r\n");
+
+		var count2 = forklift.CountPaperRollsPartTwo();
+
+		Console.WriteLine($"TOTAL PAPER ROLLS PART TWO IS {count2}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");
