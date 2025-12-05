@@ -2,6 +2,7 @@
 using Day_2;
 using Day_3;
 using Day_4;
+using Day_5;
 
 namespace Advent_of_Code_2025;
 
@@ -55,7 +56,7 @@ public class AOC25
 		var totalJoltagePartTwo = charger.TotalJoltagePartTwo();
 		Console.WriteLine($"TOTAL JOLTAGE PART TWO IS {totalJoltagePartTwo}");*/
 
-		Console.WriteLine("/////////// 04 /////////// \r\n");
+		/*Console.WriteLine("/////////// 04 /////////// \r\n");
 
 		var forklift = new Forklift();
 		//forklift.PrintMatrix();
@@ -68,7 +69,19 @@ public class AOC25
 
 		var count2 = forklift.CountPaperRollsPartTwo();
 
-		Console.WriteLine($"TOTAL PAPER ROLLS PART TWO IS {count2}");
+		Console.WriteLine($"TOTAL PAPER ROLLS PART TWO IS {count2}");*/
+
+		Console.WriteLine("/////////// 05 /////////// \r\n");
+
+		var inventory = new Inventory();
+		var validCount = inventory.CountFreshIngredients();
+
+		Console.WriteLine($"TOTAL VALID ITEMS IS {validCount}");
+
+		Console.WriteLine("/////////// 05 - 2 /////////// \r\n");
+
+		var validIdCount = inventory.CountValidIds();
+		Console.WriteLine($"TOTAL VALID IDS IS {validIdCount}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");
