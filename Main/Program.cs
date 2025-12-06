@@ -3,6 +3,7 @@ using Day_2;
 using Day_3;
 using Day_4;
 using Day_5;
+using Day_6;
 
 namespace Advent_of_Code_2025;
 
@@ -71,7 +72,7 @@ public class AOC25
 
 		Console.WriteLine($"TOTAL PAPER ROLLS PART TWO IS {count2}");*/
 
-		Console.WriteLine("/////////// 05 /////////// \r\n");
+		/*Console.WriteLine("/////////// 05 /////////// \r\n");
 
 		var inventory = new Inventory();
 		var validCount = inventory.CountFreshIngredients();
@@ -81,7 +82,19 @@ public class AOC25
 		Console.WriteLine("/////////// 05 - 2 /////////// \r\n");
 
 		var validIdCount = inventory.CountValidIds();
-		Console.WriteLine($"TOTAL VALID IDS IS {validIdCount}");
+		Console.WriteLine($"TOTAL VALID IDS IS {validIdCount}");*/
+
+		Console.WriteLine("/////////// 06 /////////// \r\n");
+		var mathSheet = new MathSheet();
+		var result = mathSheet.CalculateResult();
+
+		Console.WriteLine($"RESULT IS {result}");
+
+		Console.WriteLine("/////////// 06 - 2 /////////// \r\n");
+
+		var resultPartTwo = mathSheet.CalculateResultPartTwo();
+
+		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");
