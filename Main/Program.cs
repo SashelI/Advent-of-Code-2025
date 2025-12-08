@@ -4,6 +4,7 @@ using Day_3;
 using Day_4;
 using Day_5;
 using Day_6;
+using Day_7;
 
 namespace Advent_of_Code_2025;
 
@@ -84,7 +85,7 @@ public class AOC25
 		var validIdCount = inventory.CountValidIds();
 		Console.WriteLine($"TOTAL VALID IDS IS {validIdCount}");*/
 
-		Console.WriteLine("/////////// 06 /////////// \r\n");
+		/*Console.WriteLine("/////////// 06 /////////// \r\n");
 		var mathSheet = new MathSheet();
 		var result = mathSheet.CalculateResult();
 
@@ -94,6 +95,17 @@ public class AOC25
 
 		var resultPartTwo = mathSheet.CalculateResultPartTwo();
 
+		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");*/
+
+		Console.WriteLine("/////////// 07 /////////// \r\n");
+
+		var beamSimulator = new TachyonBeam();
+		var result = beamSimulator.SimulateBeam();
+		Console.WriteLine($"RESULT IS {result}");
+
+		Console.WriteLine("/////////// 07 - 2 /////////// \r\n");
+
+		var resultPartTwo = beamSimulator.SimulateBeamPartTwo();
 		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
