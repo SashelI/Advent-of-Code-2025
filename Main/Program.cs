@@ -5,6 +5,7 @@ using Day_4;
 using Day_5;
 using Day_6;
 using Day_7;
+using Day_8;
 
 namespace Advent_of_Code_2025;
 
@@ -97,7 +98,7 @@ public class AOC25
 
 		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");*/
 
-		Console.WriteLine("/////////// 07 /////////// \r\n");
+		/*Console.WriteLine("/////////// 07 /////////// \r\n");
 
 		var beamSimulator = new TachyonBeam();
 		var result = beamSimulator.SimulateBeam();
@@ -106,6 +107,19 @@ public class AOC25
 		Console.WriteLine("/////////// 07 - 2 /////////// \r\n");
 
 		var resultPartTwo = beamSimulator.SimulateBeamPartTwo();
+		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");*/
+
+		Console.WriteLine("/////////// 08 /////////// \r\n");
+
+		var playground = new Playground();
+		var result = playground.Part1();
+
+		Console.WriteLine($"RESULT IS {result}");
+
+		Console.WriteLine("/////////// 08 - 2 /////////// \r\n");
+
+		var resultPartTwo = playground.Part2();
+
 		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
