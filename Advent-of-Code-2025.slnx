@@ -7,5 +7,6 @@
   <Project Path="Day 6/Day 6.csproj" Id="904ab145-512e-40f4-940f-b6269a2b7514" />
   <Project Path="Day 7/Day 7.csproj" Id="67e4b29e-b5ba-43c2-b587-1784972e9152" />
   <Project Path="Day 8/Day 8.csproj" Id="3ae4c1ec-a57a-4b97-a2b1-2b0fd16e2165" />
+  <Project Path="Day 9/Day 9.csproj" Id="2c6afad5-350d-4e29-8860-c18845b09f0f" />
   <Project Path="Main/Advent-of-Code-2025.csproj" />
 </Solution>

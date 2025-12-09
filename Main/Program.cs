@@ -109,7 +109,7 @@ public class AOC25
 		var resultPartTwo = beamSimulator.SimulateBeamPartTwo();
 		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");*/
 
-		Console.WriteLine("/////////// 08 /////////// \r\n");
+		/*Console.WriteLine("/////////// 08 /////////// \r\n");
 
 		var playground = new Playground();
 		var result = playground.Part1();
@@ -120,7 +120,10 @@ public class AOC25
 
 		var resultPartTwo = playground.Part2();
 
-		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");
+		Console.WriteLine($"RESULT PART TWO IS {resultPartTwo}");*/
+
+		Console.WriteLine("/////////// 09 /////////// \r\n");
+
 
 		timer = (DateTime.Now - start).TotalMilliseconds;
 		Console.WriteLine($"Time : {timer} ms" + "\r\n");
